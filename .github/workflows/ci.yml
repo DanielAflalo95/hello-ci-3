@@ -27,7 +27,7 @@
             pip install -r requirements.txt # If you have a requirements.txt file
         - name: Run tests with pytest
           run: |
-            pytest --cov=main --cov-report=xml --cov-report=term-missing
+            pytest --cov=main --cov-report=term-missing --cov-fail-under=80
         - name: Run flake8 
           run: |
             flake8 . --max-line-length=88
